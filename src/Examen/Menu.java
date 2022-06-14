@@ -14,10 +14,10 @@ public class Menu {
 
         System.out.println("""
                 Elija la opción que desee realizar:
-                  [1] Ver todos los jugadores
-                  [2] Ver pista
-                  [3] Puntuación final de la partida en cada pista
-                  [4] Puntuación máxima de cada pista
+                  [1] Ver los jugadores de la pista que elija
+                  [2] Puntuacion final de la partida en la pista que elija
+                  [3] Conocer al jugador con la máxima puntuación de la pista que elija
+                  [4] Pistas ordenadas por puntos en orden decreciente
                   [5] Salir
                  """);
 
@@ -35,17 +35,20 @@ public class Menu {
             switch (opc) {
 
                 case 1:
-                    System.out.println("Estos son todos los participantes del campeonato:");
-                   Partida.verJugadores();
+                    System.out.println("Estos son los jugadores de esta pista:");
+                   Utilidades.verJugadores();
                     break;
                 case 2:
-                    System.out.println("Estás son las pistas: ");
+                    System.out.println("Esta es la puntuacion final de la partida en esta pista:");
+                    Utilidades.puntuacionFinalPista();
                     break;
                 case 3:
-                    System.out.println("La puntuación final de la partida den cada pista es:");
+                    System.out.println("Este es el jugador con la máxima puntuación de esta pista: ");
+                    Utilidades.puntuacionMaxPista();
                     break;
                 case 4:
-                    System.out.println("La puntuación máxima de cada pista es:");
+                    System.out.println("Las pistas ordenadas por puntos en orden decreciente son: ");
+                    Utilidades.ordenarpista();
                     break;
                 case 5:
                     System.out.println("Hasta pronto!");
