@@ -35,15 +35,15 @@ public class Menu {
             switch (opc) {
 
                 case 1:
-                    System.out.println("Estos son los jugadores de esta pista:");
+                    System.out.println("Elija una pista:");
                    Utilidades.verJugadores();
                     break;
                 case 2:
-                    System.out.println("Esta es la puntuacion final de la partida en esta pista:");
+                    System.out.println("Elija una pista:");
                     Utilidades.puntuacionFinalPista();
                     break;
                 case 3:
-                    System.out.println("Este es el jugador con la máxima puntuación de esta pista: ");
+                    System.out.println("Elija una pista: ");
                     Utilidades.puntuacionMaxPista();
                     break;
                 case 4:
