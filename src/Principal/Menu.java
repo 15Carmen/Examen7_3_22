@@ -1,4 +1,4 @@
-package Examen;
+package Principal;
 
 import java.util.Scanner;
 
@@ -10,7 +10,7 @@ public class Menu {
         return sc.nextInt();
     }
 
-    public static void crearMenu() {
+    public static void imprimirMenu() {
 
         System.out.println("""
                 Elija la opción que desee realizar:
@@ -23,32 +23,32 @@ public class Menu {
 
     }
 
-    public static void pintarMenu() {
+    public static void crearMenuPrograma() {
 
         int opc;
         boolean salir = false;
 
         do {
-            crearMenu();
+            imprimirMenu();
             opc = leerOpcion();
 
             switch (opc) {
 
                 case 1:
-                    System.out.println("Elija una pista:");
+                    System.out.println("Elija una pista. Tenga en cuenta que las pistas estan numeradas del 0 al 11:");
                    Utilidades.verJugadores();
                     break;
                 case 2:
-                    System.out.println("Elija una pista:");
+                    System.out.println("Elija una pista. Tenga en cuenta que las pistas estan numeradas del 0 al 11:");
                     Utilidades.puntuacionFinalPista();
                     break;
                 case 3:
-                    System.out.println("Elija una pista: ");
+                    System.out.println("Elija una pista. Tenga en cuenta que las pistas estan numeradas del 0 al 11: ");
                     Utilidades.puntuacionMaxPista();
                     break;
                 case 4:
                     System.out.println("Las pistas ordenadas por puntos en orden decreciente son: ");
-                    Utilidades.ordenarpista();
+                    Utilidades.ordenarPistas();
                     break;
                 case 5:
                     System.out.println("Hasta pronto!");

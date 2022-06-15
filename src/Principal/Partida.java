@@ -1,8 +1,6 @@
-package Examen;
+package Principal;
 
-import java.util.Arrays;
-
-public class Partida implements Comparable<Partida>{
+public class Partida{
 
     //atributos
     private String nombre;
@@ -10,10 +8,6 @@ public class Partida implements Comparable<Partida>{
     private int puntos;
 
     //constructor
-
-    public Partida() {
-    }
-
     public Partida(String nombre, int edad, int puntos){
         this.nombre=nombre;
         this.edad=edad;
@@ -43,13 +37,11 @@ public class Partida implements Comparable<Partida>{
         this.puntos = puntos;
     }
 
+    //método toString
     @Override
     public String toString() {
         return String.format("%S, %d, %d \n", nombre, edad, puntos);
     }
 
-    @Override
-    public int compareTo(Partida partida) {
-        return partida.puntos-this.puntos;
-    }
+
 }
